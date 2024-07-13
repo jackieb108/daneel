@@ -1,6 +1,9 @@
 import { fetchEventSource } from "@fortaine/fetch-event-source";
 import { useMemo, useState } from "react";
 import { appConfig } from "../../config.browser";
+/* JB JB2*/
+import {exec} from 'child_process';
+/*JB end JB*/
 
 const API_PATH = "/api/chat";
 interface ChatMessage {
@@ -62,7 +65,7 @@ export function useChat() {
     console.log("clear");
     setChatHistory([]);
     /** JB JB1 as you clear histroy, invoke fake python script */
-    import {exec} from 'child_process'
+    
     //if you don't use module use this line instead:
     // const { exec } = require('child_process')
 
