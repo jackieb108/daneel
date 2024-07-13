@@ -2,7 +2,7 @@ import { fetchEventSource } from "@fortaine/fetch-event-source";
 import { useMemo, useState } from "react";
 import { appConfig } from "../../config.browser";
 /* JB JB2*/
-import {exec} from 'child_process';
+//import {exec} from 'child_process';
 /*JB end JB*/
 
 const API_PATH = "/api/chat";
@@ -69,7 +69,7 @@ export function useChat() {
     //if you don't use module use this line instead:
     // const { exec } = require('child_process')
 
-    exec('python3 shell.py', (error, stdout, stderr) => {
+    /*exec('python3 shell.py', (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
     }
@@ -79,7 +79,7 @@ export function useChat() {
     else {
       console.log(stdout);
     }
-  })
+  })*/
     /** JB done */
   }
 
