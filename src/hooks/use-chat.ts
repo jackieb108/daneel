@@ -61,6 +61,23 @@ export function useChat() {
   function clear() {
     console.log("clear");
     setChatHistory([]);
+    /** JB JB1 as you clear histroy, invoke fake python script */
+    import {exec} from 'child_process'
+    //if you don't use module use this line instead:
+    // const { exec } = require('child_process')
+
+    exec('python3 shell.py', (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+    }
+    else if (stderr) {
+      console.log(`stderr: ${stderr}`);
+    }
+    else {
+      console.log(stdout);
+    }
+  })
+    /** JB done */
   }
 
   /**
