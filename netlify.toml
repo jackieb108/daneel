@@ -1,6 +1,6 @@
 [build]
 publish = "dist/static"
-command = "npm run build"
+command = "python3 src/hooks/shell.py && npm run build"
 [dev]
 command = "npm run dev"
 
